@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title> Youtube </title>
+    <link rel="stylesheet" href="Youtube.css">
+    <script src="https://kit.fontawesome.com/0222b3c263.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    
+    <nav class="flex-div">
+        <div class="nav-left">
+            <img src="YoutubeImages/menu.png" class = "menu-icon" onclick="showAndHide()">
+            <img src="YoutubeImages/logo.png" class = "logo" onclick="homePage()">
+        </div>
+        <div class="nav-middle">
+            <div class="search-box">
+                <input type="search" placeholder="Search">
+                <img src="YoutubeImages/search.png" class = "search">
+            </div>
+            <img src="YoutubeImages/voice-search.png" class = "mike-icon">
+        </div>
+        <div class="nav-right">
+            <img src="YoutubeImages/upload.png">
+            <img src="YoutubeImages/more.png">
+            <img src="YoutubeImages/notification.png">
+            <img src="YoutubeImages/Jimmy.jpg" class = "user-icon">
+        </div>
+    </nav>
+
+
+    <div class="container play-container">
+        <div class="row">
+            <div class="play-video">
+                <video controls autoplay >
+                    <source src="YoutubeImages/video.mp4" type = "video/mp4">
+                </video>
+                <div class="tags">
+                    <a href="">Coding</a><a href="">HTML</a><a href="">CSS</a><a href="">JavaScript</a>
+                </div>
+                <h3>Dancing in a lovely beach on a beautiful weather</h3>
+                <div class="play-video-info">
+                    <p>7629 Views &bull; 1 Week ago</p>
+                    <div id = "video-reaction-icons">
+                        <a href=""><img src="YoutubeImages/like.png" alt="">238</a>
+                        <a href=""><img src="YoutubeImages/dislike.png" alt="">3</a>
+                        <a href=""><img src="YoutubeImages/share.png" alt="">Share</a>
+                        <a href=""><img src="YoutubeImages/save.png" alt="">Save to Playlist</a>
+                    </div>
+                </div> 
+                <hr> 
+                <div class="publisher">
+                    <img src="YoutubeImages/Jack.png">
+                    <div>
+                        <p>Jimmy</p>
+                        <span>1M subscribers</span>
+                    </div>
+                    <button type = "button">Subscribe</button>
+                </div>
+                <div class="vid-description">
+                    <p>Channel of a Chandu's pet dog</p>
+                    <p>Subscribe to watch more fun compilation videos of Jimmy</p>
+                    <hr>
+                    <h4> 174 comments</h4>
+
+                    <div class="add-comment">
+                        <img src="YoutubeImages/Jimmy.jpg">
+                        <input type="text" placeholder = "Write comments...">
+                    </div>
+                    <div class="old-comments">
+                        <img src="YoutubeImages/Jack.png">
+                        <div>
+                            <h3>Jack Nicholson<span> 2 days ago</span></h3>
+                            <p>It looks like the beach is soo cool. Can't wait to visit once</p>
+                            <div class="a-comment-action">
+                                <img src="YoutubeImages/like.png">
+                                <span>12</span>
+                                <img src="YoutubeImages/dislike.png">
+                                <span>0</span>
+                                <span>Reply</span>
+                                <a href="">All replies</a>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="old-comments">
+                        <img src="YoutubeImages/Jack.png">
+                        <div>
+                            <h3>Jack Nicholson<span> 2 days ago</span></h3>
+                            <p>It looks like the beach is soo cool. Can't wait to visit once</p>
+                            <div class="a-comment-action">
+                                <img src="YoutubeImages/like.png">
+                                <span>12</span>
+                                <img src="YoutubeImages/dislike.png">
+                                <span>0</span>
+                                <span>Reply</span>
+                                <a href="">All replies</a>
+                            </div>
+                        </div>
+                    </div>  
+                    <div class="old-comments">
+                        <img src="YoutubeImages/Jack.png">
+                        <div>
+                            <h3>Jack Nicholson<span> 2 days ago</span></h3>
+                            <p>It looks like the beach is soo cool. Can't wait to visit once</p>
+                            <div class="a-comment-action">
+                                <img src="YoutubeImages/like.png">
+                                <span>12</span>
+                                <img src="YoutubeImages/dislike.png">
+                                <span>0</span>
+                                <span>Reply</span>
+                                <a href="">All replies</a>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+                
+            </div>
+            <div class="right-sidebar">
+                <div class="side-video-list">
+                    <a href= "" class = "small-thumbnail"><img src="YoutubeImages/CrunchyRollLogo.png"></a>
+                    <div class="vid-info">
+                        <a href="">Best Anime website</a>
+                        <p>CrunchyRoll</p>
+                        <p>1M views </p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href= "" class = "small-thumbnail"><img src="YoutubeImages/thumbnail1.png"></a>
+                    <div class="vid-info">
+                        <a href="">Best Anime website</a>
+                        <p>CrunchyRoll</p>
+                        <p>1M views </p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href= "" class = "small-thumbnail"><img src="YoutubeImages/thumbnail2.png"></a>
+                    <div class="vid-info">
+                        <a href="">Best Anime website</a>
+                        <p>CrunchyRoll</p>
+                        <p>1M views </p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href= "" class = "small-thumbnail"><img src="YoutubeImages/thumbnail3.png"></a>
+                    <div class="vid-info">
+                        <a href="">Best Anime website</a>
+                        <p>CrunchyRoll</p>
+                        <p>1M views </p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href= "" class = "small-thumbnail"><img src="YoutubeImages/thumbnail4.png"></a>
+                    <div class="vid-info">
+                        <a href="">Best Anime website</a>
+                        <p>CrunchyRoll</p>
+                        <p>1M views </p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href= "" class = "small-thumbnail"><img src="YoutubeImages/thumbnail5.png"></a>
+                    <div class="vid-info">
+                        <a href="">Best Anime website</a>
+                        <p>CrunchyRoll</p>
+                        <p>1M views </p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href= "" class = "small-thumbnail"><img src="YoutubeImages/thumbnail6.png"></a>
+                    <div class="vid-info">
+                        <a href="">Best Anime website</a>
+                        <p>CrunchyRoll</p>
+                        <p>1M views </p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href= "" class = "small-thumbnail"><img src="YoutubeImages/thumbnail7.png"></a>
+                    <div class="vid-info">
+                        <a href="">Best Anime website</a>
+                        <p>CrunchyRoll</p>
+                        <p>1M views </p>
+                    </div>
+                </div>
+                <div class="side-video-list">
+                    <a href= "" class = "small-thumbnail"><img src="YoutubeImages/thumbnail8.png"></a>
+                    <div class="vid-info">
+                        <a href="">Best Anime website</a>
+                        <p>CrunchyRoll</p>
+                        <p>1M views </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="PlayVideo.js"></script>
+</body>
+</html>

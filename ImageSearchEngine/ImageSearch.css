@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(0, 0, 0, 0.866);
+    color: #fff;
+}
+
+h1 {
+    margin: 60px auto 40px;
+    text-align: center;
+}
+
+span {
+    color: aliceblue;
+}
+
+form {
+    width: 90%;
+    max-width: 500px;
+    align-items: center;
+    background: rgb(222, 11, 11);
+    margin: auto;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    border: 0;
+    outline: 0;
+    border-radius: 8px;
+}
+
+form input {
+    flex:1;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: #fff;
+    padding: 2px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    height: 100%;
+}
+::placeholder {
+    color: #fff;
+    font-size: 14px;;
+}
+
+form button {
+    height: 100%;
+    width: 18%;
+    color: black;
+    background: #fff;
+    border: 0;
+    outline: 0;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#show-more-btn {
+    color: black;
+    background: #fff;
+    border: 0;
+    outline: 0;
+    border-radius: 4px;
+    cursor: pointer;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 13px;
+    margin: 10px auto 100px;
+    display: none;
+}
+
+#show-more-btn:hover {
+    background:rgb(222, 11, 11);
+    color: #fff;
+}
+
+#search-result {
+    width: 80%;
+    margin: 100px auto 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 40px;
+}
+
+#search-result img {
+    width: 100%;
+    height: 230px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+#error {
+    text-align : center;
+    color: #fff;
+    margin: 60px auto 40px;
+}
+
+/*
+const apiKey = "bU4oMLgiGCBP4wKVRb3zkpVEExZTVJQFcyssYYfCn9E";
+const searchBox = document.getElementById("search-box");
+const searchForm = document.getElementById("search-form");
+const searchResult = document.getElementById("search-result");
+const showMoreBtn = document.getElementById("show-more-btn");
+
+let keyword = "";
+let page = 1;
+
+async function searchImages() {
+    keyword = searchBox.value;
+    const url = `https://api.unsplash.com/search/collections?page=${page}&query=${keyword}&client_id=${apiKey}&per_page=12`;
+    const response = await fetch(url);
+    const data = await response.json();
+    console.log(data);
+
+    if (page === 1) {
+        searchResult.innerHTML = "";
+    }
+
+    const results = data.results;
+
+    results.map((result) => {
+        const image = document.createElement("img");
+        image.src = result.cover_photo.urls.small;
+        const imageLink = document.createElement("a");
+        imageLink.href = result.links.html;
+        imageLink.target = "_blank";
+
+        imageLink.appendChild(image);
+        searchResult.appendChild(imageLink);
+    })
+    showMoreBtn.style.display = 'block';
+
+    
+    if ((results.length === 0) && (keyword !== '')){
+        const err = document.getElementById("error");
+        err.innerHTML = `${keyword} Images are not found`;
+        showMoreBtn.style.display ='none';
+        return;
+    }
+    else if (keyword == '') {
+        const err = document.getElementById("error");
+        err.innerHTML = 'Please enter something to see';
+        showMoreBtn.style.display ='none';
+        return;
+    }
+    document.getElementById("error").innerHTML = "";
+};
+console.log(searchImages())
+searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    page = 1;
+    searchImages();
+});
+
+showMoreBtn.addEventListener('click', () => {
+    page++;
+    searchImages();
+});
+*/

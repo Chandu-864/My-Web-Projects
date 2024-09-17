@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>My Portfolio </title>
+    <link rel = "stylesheet" href = "PortfolioStyle.css">
+    <script src="https://kit.fontawesome.com/0222b3c263.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+    <div id ="header">
+        <div class="container">
+            <nav>
+                <img src="PortImages/logo.png" class = "logo">
+                <i class="fa-solid fa-bars" onclick="openMenu()"></i>
+                <ul id = "sidemenu">
+                    <li><a href = "#">Home</a></li>
+                    <li><a href = "#">About</a></li>
+                    <li><a href = "#">Services</a></li>
+                    <li><a href = "#">Portfolio</a></li>
+                    <li><a href = "#">Contact</a></li>
+                    <i class="fa-solid fa-circle-xmark" onclick="closeMenu()"></i>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Web Devloper</p>
+                <h1>Hi, I'm <span>Chandu Thalati</span><br>from India</h1>
+            </div>
+        </div>
+    </div>
+    <!-------------about section---------------->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="PortImages/user.png">
+                </div>
+                <div class="about-col-2">
+                    <h1>About me</h1>
+                    <p>I am currently pursuing my master's in Information Technology. While I was learning different tools from my friends, I came across HTML, CSS and Javascript which had a strong impression on me as I alwasy have a curiosity on how websites were built and managed. It is that that I decided to work on building webpages and choose a carrer towards web development.</p>
+                    <div class="tab-titles">
+                        <p class = "tab-links active-link" onclick = "opentab('skills')">Skills</p>
+                        <p class = "tab-links" onclick = "opentab('experience')">Experience</p>
+                        <p class = "tab-links" onclick = "opentab('education')">Education</p>
+                    </div>
+                    <div class="table-contents active-table" id = "skills">
+                        <ul>
+                            <li><span>UX/UI</span><br>Designing web interfaces</li>
+                            <li><span>Websites</span><br>Building web pages</li>
+                            <li><span>App Development</span><br>Builds Apps for systems</li>
+                        </ul>
+                    </div>
+                    <div class="table-contents" id = "experience">
+                        <ul>
+                            <li><span>May 2023 - Dec 2024</span><br>Telecomm Student worker</li>
+                            <li><span>2024</span><br>Personal website building</li>
+                            <li><span>2018</span><br>Railways internship</li>
+                        </ul>
+                    </div>
+                    <div class="table-contents" id = "education">
+                        <ul>
+                            <li><span>present</span><br>Marist college Graduate student</li>
+                            <li><span>2019</span><br>Graduate at KL university</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------------services-------------------------->
+    <div id="services">
+        <div class="container">
+            <h1 class = "serviceheading">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web developer</h2>
+                    <p>come back here once you finish everything and change this section</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-solid fa-crop"></i>
+                    <h2>UX/UI</h2>
+                    <p>come back here once you finish everything and change this section</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>Web sites</h2>
+                    <p>come back here once you finish everything and change this section</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-----------------------------portfolio--------------------------->
+
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="portfolioheading">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="PortImages/work-1.png" >
+                    <div class="layer">
+                        <h3>Weather app</h3>
+                        <p>This app tells you about the current weather of the city and can search for weather of any city around the world</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="PortImages/work-2.png" >
+                    <div class="layer">
+                        <h3>Quiz app</h3>
+                        <p>The quiz app contains five fixed questions and displays the score at the last</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="PortImages/work-3.png" >
+                    <div class="layer">
+                        <h3>Random Password generator</h3>
+                        <p>This website will create a strong 12-digit password</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class = "btn">See more</a>
+
+        </div>
+    </div>
+    <!-----------------------------------contact------------------------------>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="contactheading">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>chanduthalati@gmail.com</p>
+                    <p><i class="fa-solid fa-phone-volume"></i>845-484-9802</p>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.linkedin.com/"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="PortImages/my-cv.pdf" download class = "btn btn2">Download CV </a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name = "name" placeholder="Enter your name" required>
+                        <input type="email" name = "email" placeholder = "Enter your email address" required>
+                        <textarea name="message" rows = "6" placeholder = "your message"></textarea>
+                        <button type="submit" class = "btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p><i class="fa-solid fa-copyright"></i> Chandu. </p>
+        </div>
+    </div>
+
+<script src = "PortfolioScipt.js"></script>
+</body>
+</html>
