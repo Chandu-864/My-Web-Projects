@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F5F5F5;
+    color:  #080808;
+}
+
+#header {
+   width: 100%;
+   height: 100vh;
+
+}
+
+.header-set img {
+    width: 65px;
+    border-radius: 50%;
+}
+
+.header-set {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.header-set p {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+.container {
+    width: 100%;
+    background: #fff;
+    padding-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    border-bottom: 2px dotted #080808;
+}
+
+.home-options #sidemenu {
+    margin-top: -11px;
+    margin-right: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-options #sidemenu li {
+    margin: 10px;
+    display: inline;
+    align-items: center;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+.home-options #sidemenu li a {
+    color:  #080808;
+    margin: 0px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    position: relative;
+}
+
+.home-options #sidemenu li a::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff6a00;
+    left: 0;
+    bottom: -6px;
+    position: absolute;
+    transition: 0.3s;
+}
+
+.home-options #sidemenu li a:hover::after{
+    width: 100%;
+}
+
+.intro {
+    margin: 140px 0px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heading h1 {
+    font-size: 45px;
+}
+
+.heading h1 i {
+    color: #ff6a00;
+}
+
+.heading p {
+    margin-top: 35px;
+    font-size: 22px;
+    text-align: center;
+    color:#262626fc
+}
+
+.heading button {
+    display: block; 
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 240px;
+    padding: 20px 30px;
+    border-radius: 5px;
+    border:0;
+    outline:0;
+    background: #ff6a00;
+    color:#fff;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.heading button:hover {
+    background: #d36618;
+    color: #FFFFFF;
+}
+
+.social-icons {
+    width: 250px;
+    height: 40px;
+    margin: 0px auto;
+    margin-top: 100px;
+    background: #ffffffcb;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons a i {
+    border-radius: 50%;
+    color: black;
+    font-size: 30px;
+    font-weight: 600;
+    margin: 0px 15px;
+    padding: 6px;
+}
+
+.social-icons a i:hover {
+    color: #ff6a00;
+    background: black;
+}
