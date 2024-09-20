@@ -8,8 +8,7 @@
 </head>
 
 <body>
-
-        <!------------------------------------------------Home-Page-------------------------------------------------------->
+    
     <div id ="header">
 
         <div class="container">
@@ -18,27 +17,31 @@
                 <p>CHANDU THALATI</p>
             </div>
             <div class = "home-options">
-                <a class = "menu-icon" href=""><i class="fa-solid fa-bars"></i></a>
                 <ul id = "sidemenu">
                     <li><a href = "Chandu Portfolio.html">HOME</a></li>
                     <li><a href = "#">ABOUT</a></li>
                     <li><a href = "#">PROJECTS</a></li>
-                    <li><a id = "contact-information" href = "Chandu Contact Page.html">CONTACT</a></li>
                 </ul>
             </div>
         </div>
 
-        <div class="intro">
-            <div class="heading">
-                <h1>HELLO <i class="fa-solid fa-hand"></i>, I'M CHANDU THALATI </h1>
-                <p>a web developer specializing in creating responsive,</br>
-                    user-friendly websites. I combine clean code with</br>
-                    modern design to bring digital ideas to life."
-                </p>
-                <button type="button">CONTACT ME!</button>
+    <div class="contact-section">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="contactheading">CONTACT ME</h1>
+                <p><i class="fa-solid fa-envelope"></i>chanduthalati@gmail.com</p>
+                <p><i class="fa-solid fa-phone-volume"></i>845-484-9802</p>
+            </div>
+            <div class="contact-right">
+                <form>
+                    <input type="text" name = "name" placeholder="Enter your name" required>
+                    <input type="email" name = "email" placeholder = "Enter your email address" required>
+                    <textarea name="message" rows = "6" placeholder = "your message"></textarea>
+                    <button type="submit" class = "contact-submit-button">Send Message</button>
+                </form>
             </div>
         </div>
-        <div class="social-icons">
+        <div class="contact-social-icons">
             <div class = "media">
                 <a href="https://github.com/Chandu-864/My-Web-Projects"><i class="fa-brands fa-square-github"></i></a>
                 <a href="https://www.linkedin.com/in/chandu-thalati-268839267/"><i class="fa-brands fa-linkedin"></i></a>
@@ -47,11 +50,8 @@
         </div>
     </div>
 
-    <!------------------------------------------------Contact-Section-------------------------------------------------------->
 
 
-
-
-<script src = "Chandu Portfolio.js"></script>
+    <script src = "Chandu Portfolio.js"></script>
 </body>
 </html>

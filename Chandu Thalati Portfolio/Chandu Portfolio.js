@@ -21,3 +21,10 @@ function closeMenu() {
     console.log("close menu clicked");
     document.getElementById("sidemenu").style.display = "none";
 }
+
+
+var contactDetails = document.getElementById('contact-information');
+
+contactDetails.addEventListener('click', function() {
+    this.style.display = 'none';
+})
