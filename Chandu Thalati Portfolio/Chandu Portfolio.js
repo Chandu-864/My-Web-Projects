@@ -23,8 +23,62 @@ function closeMenu() {
 }
 
 
-var contactDetails = document.getElementById('contact-information');
+var headerContent = document.getElementById('header');
 
-contactDetails.addEventListener('click', function() {
-    this.style.display = 'none';
-})
+//--------------------------------------intersection observer for projects page-----------------------------//
+
+const items = document.querySelectorAll(".projects-item");
+const options = {
+    root: null,
+    threshold: 0.1
+};
+
+const observer = new IntersectionObserver(callback, options);
+
+function callback(entries, observe) {
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+            entry.target.classList.add("scrollAnimation");
+            observer.unobserve(entry.target);
+        }
+        else {
+            return;
+        }
+    });
+}
+
+items.forEach(item => {
+    observer.observe(item);
+});
+
+//-------------------------------dark and light mode----------------------------------------//
+
+let darkMode = document.getElementById("mode");
+let iconElement = document.querySelector("#mode i");
+contactBackground = document.getElementById("background");
+
+let iconChange = document.querySelector("#mode i");
+
+
+darkMode.onclick = function() {
+    document.body.classList.toggle("dark-mode");
+
+    if(document.body.classList.contains("dark-mode")){
+        iconChange.className = "fa-solid fa-sun"
+        iconChange.style.color = "#FFE469"
+        localStorage.setItem("darkMode", "enabled");
+    }
+    else {
+        localStorage.setItem("darkMode", "disabled");
+        iconChange.className = "fa-solid fa-moon";
+        iconChange.style.color = "black"
+    }
+}
+
+window.onload = function() {
+    if (localStorage.getItem("darkMode")=== "enabled") {
+        document.body.classList.toggle("dark-mode");
+        iconChange.className = "fa-solid fa-sun"
+        iconChange.style.color = "#FFE469"
+    }
+}

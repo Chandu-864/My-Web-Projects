@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    overflow:scroll;
+}
+
+.curtain {
+    display: flex; 
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.left-curtain, .right-curtain {
+    height: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.left-curtain {
+    background-color: #ff6a00;
+    width: 50%; /* Initially covers 50% */
+    left: 0; /* Position it on the left */
+    animation: slide-left 2s ease forwards; /* Slide to the left */
+}
+
+.right-curtain {
+    background-color: #ff6a00;
+    width: 50%; /* Initially covers 50% */
+    right: 0; /* Position it on the right */
+    animation: slide-right 2s ease forwards; /* Slide to the right */
+}
+
+
+@keyframes slide-left {
+    from {
+        width: 50%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
+@keyframes slide-right {
+    from {
+        width: 50%;
+    }
+    to {
+        width: 0%;
+    }
+}
+
