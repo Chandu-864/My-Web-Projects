@@ -25,9 +25,24 @@ function closeMenu() {
 
 var headerContent = document.getElementById('header');
 
+
+//--------------------------------------=------go-to-top-button---------------------------------------------//
+
+const goTop = document.getElementById('goTop');
+
+function goToTop() {
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+    document.body.scrollTop = (0,0);
+    document.documentElement.scrollTop = (0,0);
+}
+
 //--------------------------------------intersection observer for projects page-----------------------------//
 
-const items = document.querySelectorAll(".projects-item");
+const items = document.querySelectorAll(".projects-item, .para"); // Include both classes
+
 const options = {
     root: null,
     threshold: 0.1
@@ -37,12 +52,13 @@ const observer = new IntersectionObserver(callback, options);
 
 function callback(entries, observe) {
     entries.forEach(entry => {
-        if(entry.isIntersecting){
-            entry.target.classList.add("scrollAnimation");
+        if (entry.isIntersecting) {
+            if (entry.target.classList.contains('projects-item')) {
+                entry.target.classList.add("scrollAnimation"); // Apply the existing animation for .projects-item
+            } else if (entry.target.classList.contains('para')) {
+                entry.target.classList.add("scrollAnimation-left"); // Apply the new animation for .para
+            }
             observer.unobserve(entry.target);
-        }
-        else {
-            return;
         }
     });
 }
@@ -50,6 +66,7 @@ function callback(entries, observe) {
 items.forEach(item => {
     observer.observe(item);
 });
+
 
 //-------------------------------dark and light mode----------------------------------------//
 
@@ -82,3 +99,4 @@ window.onload = function() {
         iconChange.style.color = "#FFE469"
     }
 }
+

@@ -8,34 +8,35 @@
 }
 
 .projects-item {
-    width: 60%;
+    width: 40%;
     height: auto;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 35px;
     background-image: url('Chandu Portfolio Images/Dark\ clouds.jpg');
     background-size: cover;
     background-position: center;
-    margin-left: auto;
-    margin-right: auto;
     margin-bottom: 100px;
+    margin-right: 200px;
 }
 
 .image-container {
     position: relative;
-    width: 100%;
+    width: fit-content;
     max-width: 1000px; /* Set a max width for the image */
     height: 400px; /* Fixed height for the image */
     overflow: hidden; /* Ensure overlay fits the image */
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    margin:0px auto;
 }
 
 .image-container img {
     width: 100%;
-    height: 100%;
+    height: 400px;
     object-fit: contain;
-    transition: transform 0.3s ease; /* Optional: add a zoom effect */
+    transition: transform 0.3s ease; /* add a zoom effect */
 }
 
 .image-container:hover img {
@@ -43,6 +44,7 @@
 }
 
 .image-container .text {
+    width:100%;
     position: absolute;
     top: 0;
     left: 0;
@@ -58,7 +60,7 @@
 }
 
 .image-container:hover .text {
-    height: 100%; /* Expand to full height on hover */
+    height: 400px; /* Expand to full height on hover */
 }
 
 .image-container .effect {
@@ -93,7 +95,7 @@
 }
 
 .projects-item.itemanimation .image-container:hover img {
-    transform: scale(.99); /* Slight zoom effect on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
 .projects-item {
@@ -114,4 +116,70 @@
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+
+/*-------------------------------aligning image and paragraph----------------------------*/
+
+.project-para {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.para {
+    margin-left: 200px;
+    width: 25%;
+    opacity:0;
+    height: 400px;
+}
+
+.para p {
+    font-size: 18px;
+    font-weight: 550;
+}
+
+
+.scrollAnimation-left {
+    animation: 1s slide-left ease forwards;
+    opacity: 1;
+}
+
+@keyframes slide-left {
+    0% {
+        opacity: 0;
+        transform: translatex(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/*----------------------------------------go-top---------------------------------------*/
+
+.go-top {
+    text-align: center;
+}
+
+.go-top button {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: var(--primary-color);
+    background: #ff6a00;;
+    width: 240px;
+    padding: 20px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    text-decoration: none;
+    font-weight: 600;
+    outline: 0;
+    border: 0;
+    transition: background 0.3s ease;
+}
+
+.go-top button:hover {
+    background: #d36618;
+    color: var(--teritary-color);
 }
