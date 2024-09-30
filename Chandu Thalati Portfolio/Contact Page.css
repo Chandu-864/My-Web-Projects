@@ -78,6 +78,7 @@ form .contact-submit-button:hover {
     align-items: center;
     justify-content: center;
     border: 0.1px solid var(--teritary-color);
+    border-radius: 4px;
 }
 
 .contact-social-icons a i {
@@ -111,19 +112,6 @@ form .contact-submit-button:hover {
 }
 
 
-@media (max-width: 768px) {
-    .row {
-        flex-direction: column;
-    }
-    .contact-left, .contact-right {
-        flex-basis: 100%;
-        padding: 0;
-    }
-    .contact-left {
-        margin-top: -20px;
-    }
-}
-
 #background {
     background: var(--teritary-color);
     width:100%;
@@ -137,5 +125,74 @@ form .contact-submit-button:hover {
     }
     to {
         transform: translate(0);
+    }
+}
+
+/*-------------------------------------making page responsive----------------------------*/
+
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+    .contact-left, .contact-right {
+        flex-basis: 100%;
+        padding: 0;
+    }
+    .contact-left {
+        margin-top: -20px;
+    }
+    #background {
+        background:var(--primary-color);
+    }
+    .contact-social-icons a:nth-child(1) i{
+        color: #6e5494;
+    }
+    .contact-social-icons a:nth-child(2) i {
+        color: #0A66C2;
+    }
+    .contact-social-icons a:nth-child(3) i {
+        color: #E4405F;
+    }
+     /*-----------------menu-bar--------------*/
+
+     .home-options .menu-icon {
+        color: var(--teritary-color);
+        display: block;
+        font-size: 25px;
+        font-weight: 600;
+        cursor: pointer;
+        margin:25px;
+    }
+    .home-options  #sidemenu #close {
+        display: block;
+        font-size: 28px;
+        font-weight: 600;
+        position: absolute;
+        cursor: pointer;
+        top: 9px;
+        left: 80px;
+    }
+    .home-options #sidemenu {
+        background: var(--secondary-color);
+        width: 150px;
+        height: 100vh;
+        position: fixed;
+        padding-top: 50px;
+        right: -150px;
+        transition: right 0.5s;
+        top: 0;
+        z-index: 1000;
+    }
+    .home-options #sidemenu li {
+        margin: 25px;
+    }
+    .home-options  #sidemenu #mode {
+        display: block;
+        font-size: 22px;
+        font-weight: 600;
+        position: absolute;
+        cursor: pointer;
+        top: 10px;
+        right: 80px;
     }
 }

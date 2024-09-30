@@ -12,18 +12,20 @@ function opentab(tabname){
     document.getElementById(tabname).classList.add("active-table");
 }
 
+
+//----------------------------------------Menu-option-in-small-screens-------------------------------------//
+
+var openMenubar = document.getElementById('sidemenu');
+
 function openMenu() {
-    console.log("open menu clicked");
-    document.getElementById("sidemenu").style.display = "block";
+    openMenubar.style.right = '0';
+    document.body.classList.add("menu-open");
 }
 
 function closeMenu() {
-    console.log("close menu clicked");
-    document.getElementById("sidemenu").style.display = "none";
+    openMenubar.style.right = '-150px';
+    document.body.classList.remove("menu-open");
 }
-
-
-var headerContent = document.getElementById('header');
 
 
 //--------------------------------------=------go-to-top-button---------------------------------------------//
@@ -36,7 +38,6 @@ function goToTop() {
         behavior:"smooth"
     });
     document.body.scrollTop = (0,0);
-    document.documentElement.scrollTop = (0,0);
 }
 
 //--------------------------------------intersection observer for projects page-----------------------------//

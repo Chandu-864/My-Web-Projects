@@ -43,39 +43,33 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    position: sticky;
     border-bottom: 2px dotted var(--teritary-color);
+    position:sticky;
+    top:0;
+    z-index: 1000;
 }
+
 
 .home-options .menu-icon {
     display: none;
 }
 
-.home-options #sidemenu {
-    margin-top: -11px;
-    margin-right: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
 .home-options #sidemenu li {
-    margin: 10px;
-    display: inline;
-    align-items: center;
-    list-style: none;
-    justify-content: space-evenly;
+    display: inline-block;
+    text-align: center;
     cursor: pointer;
+    margin: 0px 30px;
 }
 
 .home-options #sidemenu li a {
     color:  var(--teritary-color);
-    margin: 0px 20px;
     font-size: 16px;
     font-weight: 600;
     text-decoration: none;
     position: relative;
 }
+
+/*---sample---*/
 
 .home-options #sidemenu li a::after{
     content: '';
@@ -171,6 +165,7 @@ body {
     align-items: center;
     justify-content: center;
     border: 0.1px solid var(--teritary-color);
+    border-radius: 4px;
 }
 
 .social-icons a i {
@@ -217,59 +212,6 @@ body {
 
 #header {
     animation: fade-in 1.5s ease;
-}
-
-/*-----------------------------------samall-screens----------------------------------------*/
-
-@media (max-width: 768px) {
-
-    .home-options #sidemenu li a  {
-        display: none;
-    }
-
-    .heading h1 {
-        font-size: 35px;
-        text-align: center;
-    }
-
-    /* Adjusting the .intro margin */
-    .intro {
-        margin: 90px 0px 15px; /* Reduced the top margin */
-    }
-
-    /* If there's still space, try adjusting body padding/margin */
-    body {
-        padding-bottom: 0;
-        margin-bottom: 0;
-    }
-    .heading {
-        width: 50%;
-        height: 500px;
-    }
-    .heading a {
-       margin: 20px auto;
-    }
-    .home-options .menu-icon{
-        display:block;
-    }
-    .home-options .menu-icon i{
-        width:fit-content;
-        text-decoration: none;
-        font-size: 40px;
-        color:var(--teritary-color);
-        margin-left:60%;
-    }
-    .header-set img {
-        width: 50px;
-    }
-    .header-set p {
-        font-size: 15px;
-    }
-
-    .container {
-        display:flex;
-        justify-content: space-between;
-    }
 }
 
 
@@ -351,7 +293,7 @@ form .contact-submit-button:hover {
     width: 250px;
     height: 50px;
     margin: 100px auto 0px auto;
-    background: var(--secondary-color);
+    background: var(--social-color);
     display:flex;
     align-items: center;
     justify-content: center;
@@ -388,6 +330,14 @@ form .contact-submit-button:hover {
     transition: background 0.5s;
 }
 
+#background {
+    background: var(--teritary-color);
+    width:100%;
+    height: 600px;
+}
+
+/*---------------------contacts page-------------------*/
+
 
 @media (max-width: 768px) {
     .row {
@@ -402,11 +352,7 @@ form .contact-submit-button:hover {
     }
 }
 
-#background {
-    background: var(--teritary-color);
-    width:100%;
-    height: 600px;
-}
+
 
 @keyframes backgroundChange {
     from {
@@ -429,10 +375,115 @@ form .contact-submit-button:hover {
     --primary-color: #f5f5f5;
     --secondary-color: #fff;
     --teritary-color: #080808;
+    --social-color: #33333323;
 }
 
 .dark-mode {
     --primary-color: #080808;
     --secondary-color: black;
     --teritary-color: #fff; 
+    --social-color: #fff;
+}
+
+
+#sidemenu #close {
+    display: none;
+}
+
+.menu-open {
+    overflow: hidden; /* Prevent scrolling when the menu is open */
+    position: fixed;  /* Keep the page fixed in place */
+    width: 100%;      /* Prevent page width from changing */
+}
+
+
+/*-----------------------------------samall-screens----------------------------------------*/
+
+
+@media (max-width: 768px) {
+
+    .heading h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    /* Adjusting the .intro margin */
+    .intro {
+        margin: 90px 0px 15px; /* Reduced the top margin */
+    }
+
+    /* If there's still space, try adjusting body padding/margin */
+    body {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .heading {
+        width: 50%;
+        height: 500px;
+    }
+    .heading a {
+       margin: 20px auto;
+    }
+    .header-set img {
+        width: 50px;
+    }
+    .header-set p {
+        font-size: 15px;
+    }
+    .social-icons a:nth-child(1) i{
+        color: #6e5494;
+    }
+    .social-icons a:nth-child(2) i {
+        color: #0A66C2;
+    }
+    .social-icons a:nth-child(3) i {
+        color: #E4405F;
+    }
+    .heading a {
+        margin: 40px auto;
+        width: 100%;
+    }
+
+    /*-----------------menu-bar--------------*/
+
+    .home-options .menu-icon {
+        color: var(--teritary-color);
+        display: block;
+        font-size: 25px;
+        font-weight: 600;
+        cursor: pointer;
+        margin:25px;
+    }
+    .home-options  #sidemenu #close {
+        display: block;
+        font-size: 28px;
+        font-weight: 600;
+        position: absolute;
+        cursor: pointer;
+        top: 9px;
+        left: 80px;
+    }
+    .home-options #sidemenu {
+        background: var(--secondary-color);
+        width: 150px;
+        height: 100vh;
+        position: fixed;
+        padding-top: 50px;
+        right: -150px;
+        transition: right 0.5s;
+        top: 0;
+        z-index: 2000;
+    }
+    .home-options #sidemenu li {
+        margin: 25px;
+    }
+    .home-options  #sidemenu #mode {
+        display: block;
+        font-size: 22px;
+        font-weight: 600;
+        position: absolute;
+        cursor: pointer;
+        top: 11.5px;
+        right: 80px;
+    }
 }

@@ -125,6 +125,7 @@
     display: flex;
     align-items: center;
     justify-content: space-around;
+    overflow: hidden;
 }
 
 .para {
@@ -182,4 +183,31 @@
 .go-top button:hover {
     background: #d36618;
     color: var(--teritary-color);
+}
+
+
+
+
+/*-------------------------------------making page responsive----------------------------*/
+
+@media (max-width: 768px) {
+    body {
+        padding: 0px;
+        margin: 0px;
+    }
+    .project-para{
+        width: 100vw;
+        height: auto;
+    }
+    .para {
+        display:none;
+    }
+    .project-para .projects-item {
+        width: 80%;
+        margin: 20px auto;
+    }
+    .projects-heading h1 {
+        font-size: 30px;
+        margin: 15px auto;
+    }
 }
