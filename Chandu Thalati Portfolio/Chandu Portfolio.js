@@ -100,4 +100,3 @@ window.onload = function() {
         iconChange.style.color = "#FFE469"
     }
 }
-
