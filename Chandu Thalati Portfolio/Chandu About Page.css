@@ -245,6 +245,27 @@
     display: block;
 }
 
+.resume a {
+    display: block; 
+    margin: 10px 0px 10px 250px;
+    width: 180px;
+    padding: 18px 15px;
+    border-radius: 5px;
+    text-align: center;
+    background: #ff6a00;
+    transition: background 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+    color:var(--secondary-color);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.resume a:hover {
+    background: #d36618;
+    color: var(--teritary-color);
+}
+
 
 
 /*-----------------------------------------small-screnns-------------------------*/
@@ -275,5 +296,8 @@
     .main-content .skills-text-sextion {
         margin: 10px 0 0 0;
         font-size: 11px;
+    }
+    .resume a {
+        margin: 5px auto;
     }
 }
