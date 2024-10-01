@@ -88,6 +88,11 @@
     margin: 10px;
 }
 
+
+.skills-text-sextion ul li:nth-child(1) {
+    border-bottom: 2px solid var(--teritary-color);
+}
+
 .skills {
     flex-basis: 45%;
     position: relative;

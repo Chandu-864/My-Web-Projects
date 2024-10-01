@@ -161,6 +161,8 @@
 
 .go-top {
     text-align: center;
+    position: relative;
+    margin-top: 20px;
 }
 
 .go-top button {
