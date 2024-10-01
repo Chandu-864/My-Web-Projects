@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title> Music Player </title>
+    <link rel="stylesheet" href="Musicplayer.css">
+    <script src="https://kit.fontawesome.com/0222b3c263.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <div class="container">
+        <div class="musicplayer">
+            <nav>
+                <div class = "circle">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class = "circle">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+            <img src="MusicPlayerFiles/images.jpeg" class = "song-img">
+            <h1>Who are you</h1>
+            <p>DSP</p>
+            <audio id = "song">
+                <source src="MusicPlayerFiles/Who Are You.mp3">
+            </audio>
+            <input type="range" value="0" id = "progress">
+            <div class="controls">
+                <i class="fa-solid fa-backward" id = "backward"></i>
+                <i class="fa-solid fa-play" id = "ctrlIcon" onclick="playPause()"></i>
+                <i class="fa-solid fa-forward" id = "forward"></i>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src = "MusicPlayer.js"></script>
+</body>
