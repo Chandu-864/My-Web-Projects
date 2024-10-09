@@ -86,15 +86,15 @@
     }
 }
 
-.projects-item.itemanimation {
+.projects-item:nth-child(1) {
     animation: bulge 1.5s ease forwards;
 }
 
-.projects-item.itemanimation {
-    background-image: url('Chandu Portfolio Images/Dark\ clouds.jpg');
+.projects-item:nth-child(1) {
+    background-image: url('Dark clouds.jpg');
 }
 
-.projects-item.itemanimation .image-container:hover img {
+.projects-item:nth-child(1) .image-container:hover img {
     transform: scale(1.05); /* Slight zoom effect on hover */
 }
 
