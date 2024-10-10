@@ -1,0 +1,60 @@
+body {
+    font-family: Verdana, sans-serif;
+    background-color: hsla(0, 0%, 91%, 0.777);
+}
+
+form {
+    background-color: #fff;
+    text-align: center;
+    width: 350px;
+    margin:auto;
+    border-radius: 10px;
+    box-shadow: 5px 5px 15px hsla(0, 2%, 12%, 0.367);
+    margin-top: 100px;
+    padding: 10px 20px;
+}
+
+h1 {
+    color: rgba(226, 135, 16, 0.92);
+}
+
+#temperature {
+    text-align: center;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    padding: 10px 25px;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+label {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+button {
+    margin-top: 10px;
+    border: 0;
+    outline:0;
+    background: rgb(50, 186, 50);
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background: rgb(32, 231, 32);;
+}
+
+#result {
+    font-size: 18px;
+    font-weight: 600;
+    padding: 10px;
+    color: #fff;
+    user-select: none;
+}

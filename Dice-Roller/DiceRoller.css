@@ -1,0 +1,46 @@
+#container {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin-top: 160px;
+    font-size: 24px;
+}
+
+p input {
+    width: 100px;
+    padding: 8px 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+p button {
+    border: 0;
+    background: greenyellow;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.25s;
+}
+
+p button:hover{
+    background: hsl(84, 60%, 59%);
+}
+
+p button:active{
+    background: hsl(84, 100%, 59%);
+}
+
+i.fa-dice-one, 
+i.fa-dice-two, 
+i.fa-dice-three, 
+i.fa-dice-four, 
+i.fa-dice-five, 
+i.fa-dice-six {
+    font-size: 50px;  /* Adjust size of the dice icon */
+    color: hsla(0, 87%, 53%, 0.875);   /* Change the color of the dice icon */
+    margin: 10px;     /* Add spacing between dice icons */
+    transition: transform 0.3s ease; /* Add hover animation */
+}
