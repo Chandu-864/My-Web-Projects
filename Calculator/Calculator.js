@@ -6,7 +6,7 @@ function appendToDisplay(input){
     if ((display.value === "Error") || (display.value === "undefined")) {
         display.value = '';
     }
-
+    display.style.color = "white";
     display.value += input;
 }
 
@@ -24,8 +24,10 @@ function calculate() {
         
         // Evaluate the expression
         display.value = eval(expression);
+        display.style.color = "white";
     } catch (e) {
         display.value = "Error";
+        display.style.color = "red";
     }
 }
 
@@ -40,37 +42,32 @@ function clearOne() {
 
 /*-------------keyboard-inputs----------------*/
 
-document.addEventListener("keydown", keyboard); // Pass the function name
+document.addEventListener("keydown", keyBoard); // Pass the function name
 
-function keyboard(event) { // 'event' is passed automatically in event listeners
-    const keyPressed = event.key; // Use 'event.key' to get the key
+function keyBoard(event) {
+    const keyPressed = event.key;
 
-    // If the key is a number or an operator, append it to the display
     if (!isNaN(keyPressed) || ["+", "-", "*", "%"].includes(keyPressed)) {
         if (keyPressed === "*") {
-            appendToDisplay("\u00D7");
+            appendToDisplay("\u00D7")
         }
-        else if (keyPressed === "%"){
+        else if (keyPressed === "%") {
             appendToDisplay("\u00F7");
         }
         else {
-            appendToDisplay(keyPressed);
+            appendToDisplay(keyPressed)
         }
     }
 
-    // Handle the "Enter" key for calculation
     if (keyPressed === "Enter") {
-        calculate()
-    }
-        
-
-    // Handle the "Backspace" key to remove the last character
-    if (keyPressed === "Backspace") {
-        clearOne();
+        calculate();
     }
 
-    // Handle the "Escape" key to clear the display
     if (keyPressed === "Escape") {
         clearDisplay();
+    }
+
+    if (keyPressed === "Backspace") {
+        clearOne();
     }
 }
