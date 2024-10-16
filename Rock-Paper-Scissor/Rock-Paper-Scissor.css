@@ -33,6 +33,10 @@ h1 {
     background: hsl(200, 89%, 42%);
 }
 
+.images button:active {
+    background: hsl(200, 89%, 100%);
+}
+
 #player-selection, #computer-selection {
     font-size: 2.5rem;
 }
@@ -73,4 +77,12 @@ h1 {
 
 .resetbtn:hover {
     background: hsl(187, 100%, 70%);
+}
+
+.space {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 30px;
 }

@@ -56,7 +56,7 @@ function restart() {
     computerScore = 0;
     playerScoreDisplay.textContent = playerScore;
     computerScoreDisplay.textContent = computerScore;
-    resultDisplay.textContent = '';
+    resultDisplay.textContent = 'Lets start!';
     playerSelection.textContent = `Player: `
     computerSelection.textContent = `Computer: `
     resultDisplay.classList.remove("greenText", "redText");
