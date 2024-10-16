@@ -2,16 +2,21 @@
 const display = document.getElementById('display');
 
 function appendToDisplay(input){
-
     if ((display.value === "Error") || (display.value === "undefined")) {
-        display.value = '';
+        display.value = '0';
     }
-    display.style.color = "white";
-    display.value += input;
+    if (display.value === '0') {
+        display.style.color = "white";
+        display.value = input;
+    }
+    else {
+        display.style.color = "white";
+        display.value += input;
+    }
 }
 
 function clearDisplay() {
-    display.value = '';
+    display.value = '0';
 }
 
 function calculate() {
@@ -20,7 +25,7 @@ function calculate() {
     }
     try {
         // Replace the displayed symbols with the correct JavaScript operators
-        const expression = display.value.replace(/\u00D7/g, "*").replace(/\u00F7/g, "/");
+        const expression = display.value.replace(/\u00D7/g, "*").replace(/\u00F7/g, "");
         
         // Evaluate the expression
         display.value = eval(expression);
@@ -34,9 +39,12 @@ function calculate() {
 
 function clearOne() {
     if ((display.value === "Error") || (display.value === "undefined")) {
-        display.value = ''
+        display.style.color = "white";
+        display.value = '0';
     }
-    display.value = display.value.slice(0,-1);
+    else {
+        display.value = display.value.slice(0,-1);
+    }
 }
 
 

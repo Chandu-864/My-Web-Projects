@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background: whitesmoke;
+    user-select: none;
+}
+
+h1 {
+    font-size: 3.5rem;
+    color: hsl(0, 0%, 20%);
+}
+
+.images {
+    margin-bottom: 30px;
+}
+
+.images button{
+    font-size: 7.5rem;
+    min-width: 160px;
+    margin: 0px 10px;
+    border-radius: 250px;
+    background: hsl(200, 89%, 62%);
+    cursor: pointer;
+    border: 0;
+    transition: background 0.25s ease;
+}
+
+.images button:hover {
+    background: hsl(200, 89%, 42%);
+}
+
+#player-selection, #computer-selection {
+    font-size: 2.5rem;
+}
+
+#result {
+    font-size: 4rem;
+    margin: 30px 0px;
+}
+
+.scores {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+.greenText, #player-score {
+    color: green;
+}
+
+.redText, #computer-score {
+    color: red;
+}
+
+.resetbtn {
+    width: 180px;
+    text-align: center;
+    margin: 25px auto;
+    padding: 15px 20px;
+    border: 0;
+    border-radius: 10px;
+    background: hsl(187, 100%, 50%);
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.25s ease;
+}
+
+.resetbtn:hover {
+    background: hsl(187, 100%, 70%);
+}

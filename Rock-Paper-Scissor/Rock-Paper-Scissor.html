@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+    <meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+    <title>Rock-Paper-Scissors</title>
+    <link rel = "stylesheet" href = "Rock-Paper-Scissor.css">
+    <script src="https://kit.fontawesome.com/0222b3c263.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <h1>Rock - Paper - Scissors</h1>
+
+    <div class="images">
+        <button onclick="selectOption('rock')">👊</button>
+        <button onclick="selectOption('paper')">🖐️</button>
+        <button onclick="selectOption('scissors')">🖖</button>
+    </div>
+
+    <div id = "player-selection">Player: </div>
+    <div id = "computer-selection">Computer: </div>
+
+    <div>
+        <p id = "result"></p>
+    </div>
+
+    <div class="scores">
+        <div class = "scoresShow">
+            Player-Score: 
+            <span id = "player-score">0</span>
+        </div>
+        <div class ="scoresShow">
+            Computer-Score: 
+            <span id = "computer-score">0</span>
+        </div>
+    </div>
+
+    <button onclick="restart()" class = "resetbtn">RESTART</button>
+    <script src="Rock-Paper-Scissor.js"></script>
+</body>
+</html>
