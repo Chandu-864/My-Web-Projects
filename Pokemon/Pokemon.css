@@ -1,0 +1,99 @@
+
+body {
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#result {
+    margin: auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    height: 400px;
+    background: white;
+    box-shadow: 1px 1px 10px;
+    text-align: center;
+}
+
+#imageDisplay {
+    margin-top: -40px;
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    animation: fade-in 1s ease forwards;
+}
+
+.search input {
+    margin: 45px 0px;
+    width: 20%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-weight: 600;
+    overflow: hidden;
+}
+
+.search button {
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    border-radius: 50%;
+    background: #fff;
+    outline: 0;
+    background: #fff;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    border: 1px solid rgb(0, 30, 255);
+}
+
+.search i {
+    color:black;
+}
+
+.search button:hover {
+    background: rgb(0, 170, 255);
+}
+
+@keyframes fade-in {
+    0% {
+        opacity:0
+    }
+    25% {
+        opacity:0.25
+    }
+    50% {
+        opacity: 0.5;
+    }
+    75% {
+        opacity: 0.75;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+#properties {
+    margin-top: -25px;
+    width: 100%;
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr); /* Stack properties vertically */
+    row-gap: 10px; /* Add spacing between each property */
+}
+
+#properties p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+#properties p:nth-child(9) {
+    grid-area: 5 / 1 / span 2 / span 2;
+}
+
+@media only screen and (max-width: 600px) { 
+    #result {
+        width: 95%;
+        height: 100%;
+    }
+}
