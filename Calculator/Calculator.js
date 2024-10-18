@@ -1,9 +1,23 @@
 
 const display = document.getElementById('display');
 
+function operatorCheck(char) {
+    return ["+", "-", "\u00D7", "\u00F7", "."].includes(char);
+}
+
 function appendToDisplay(input){
     if ((display.value === "Error") || (display.value === "undefined")) {
         display.value = '0';
+    }
+    if (operatorCheck(input) && display.value === '0') {
+        display.value ='0';
+        return;
+    }
+    
+    const lastChar = display.value.slice(-1);
+
+    if ((operatorCheck(input) && operatorCheck(lastChar) )) {
+        return;
     }
     if (display.value === '0') {
         display.style.color = "white";
@@ -14,6 +28,7 @@ function appendToDisplay(input){
         display.value += input;
     }
 }
+
 
 function clearDisplay() {
     display.value = '0';
