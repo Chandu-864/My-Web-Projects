@@ -13,20 +13,26 @@
         <input type="text" name="pokemon" id="pokemon" placeholder="Enter the Pokemon name to fetch data">
         <button onclick="search()"><i class="fa-solid fa-magnifying-glass"></i></button>
     </div>
+    <div id="error-message"></div>
     <div id="result">
-        <p id = "pokemonname"></p>
-        <img src="" alt="Pokemon" id = "imageDisplay" style="display: none;">
+        <p id = "pokemonname">PIKACHU</p>
+        <img src= "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png" alt="Pokemon" id = "imageDisplay">
         <div id="properties">
-            <p><span></span></p>
-            <p><span></span></p>
-            <p><span></span></p>
-            <p><span></span></p>
-            <p><span></span></p>
-            <p><span></span></p>
-            <p><span></span></p>
-            <p><span></span></p>
-            <p><span><a href="" id = "crylink" target="_blank"></a></span></p>
+            <p><span>Ability-1: Static</span></p>
+            <p><span>Ability-2: Iightning-rod</span></p>
+            <p><span>Type: Electric</span></p>
+            <p><span>Move: mega-punch</span></p>
+            <p><span>Height: 4 dm</span></p>
+            <p><span>Weight: 60 hg</span></p>
+            <p><span>Base Experience: 112</span></p>
+            <p><span>Number of Moves: 105</span></p>
+            <p><span><audio src="https://raw.githubusercontent.com/PokeAPI/cries/main/cries/pokemon/latest/25.ogg" id = "pokemon-audio" controls>
+                <source src="pokemon_cry.mp3" type="audio/mpeg">
+            </audio></span></p>
         </div>
+    </div>
+    <div class="link">
+        <a href="Pokemons.pdf" target="_blank"><button>View Pokemons</button></a>
     </div>
 
     <script src="Pokemon.js"></script>

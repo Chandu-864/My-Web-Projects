@@ -25,7 +25,7 @@ function calculate() {
     }
     try {
         // Replace the displayed symbols with the correct JavaScript operators
-        const expression = display.value.replace(/\u00D7/g, "*").replace(/\u00F7/g, "");
+        const expression = display.value.replace(/\u00D7/g, "*").replace(/\u00F7/g, "/");
         
         // Evaluate the expression
         display.value = eval(expression);
